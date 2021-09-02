@@ -1,0 +1,33 @@
+【作業内容】
+● ご指摘をいただいたlogのフォーマットの修正
+● GitHub-flowについて
+● #shell 0~25　
+Linuxコマンド
+if文
+for文
+配列
+
+【予定時間】
+Logの修正　-> 30分
+
+GitHub-flowについて　-> 30分
+
+#shell 0~25-> 2時間30分 
+
+【実装時間】
+Logの修正　-> 30分
+
+GitHub-flowについて　-> 30分
+
+#shell 0~25 -> 2時間30分
+
+【質問感想】
+Shellについては理解することができたが、作成したファイルをgitにあげるところで、もう一度確認しながらやったため
+少し時間がかかってしまった。
+
+【参考文献　メモ】
+Githubについて　
+https://www.youtube.com/watch?v=LDOR5HfI_sQ
+
+Git-flow GitHub-flow 違い　
+https://www.youtube.com/watch?v=0ge7ZJQvYLw&t=279s
