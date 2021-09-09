@@ -2,7 +2,7 @@
 
 #if文とfor文を利用した処理をする
 
-for ((i=1;i<=5;i++));
+for i in $(seq 1 5);
 do 
   if [ `expr $i % 2` = 0 ]; then
     echo "偶数"
