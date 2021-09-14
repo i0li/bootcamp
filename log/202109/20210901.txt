@@ -1,0 +1,40 @@
+【作業内容】
+#git内の
+● github account
+● git command
+● differences
+● gitignore
+● pull request
+
+【作業予定時間】
+github account -> 1時間
+
+git command　-> 1時間
+
+differences　-> 2時間
+gitignore
+pull request
+
+【作業実施時間】
+github account -> 30分
+
+git command　-> 30分
+
+differences　-> 5時間
+gitignore
+pull request
+
+【質問感想】
+● github account
+以前に作成したことがあったため、スムーズに作業することができた
+
+● git command
+GAtryoutに参加をする前に少しだけ勉強をしていたため、理解することができた。
+
+● differences　gitignore　pull request
+Differences,gitignoreについてはある程度は理解して使ってみることができた。
+Pull requestについてはまずブランチについて理解するのにとても時間がかかった。
+一応今のことろブランチはパラレルワールドのようなものと自分なりに解釈をしました。
+しかし、まだ完全に理解ができたわけではないのでこれからさらにgitの使い方について解を深めて、
+用語を聞いてすぐに頭でイメージが湧くくらいになりたい。
+
