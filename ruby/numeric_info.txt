@@ -1,0 +1,33 @@
+Numericクラスについて
+数値を表現するクラス
+
+=== Integerクラス ===
+number = 5
+のように定義することもできるが　
+number = Integer.induced_from(5)
+のように明示的に定義することもできる
+
+=== Floatクラス ===
+整数をfloatとして扱いたい場合は
+number = Integer.induced_from(10)
+のようにすることでfloatとして扱うことができる
+
+=== メソッド ===
+＃to_f , to_i
+Integerクラスをfloatクラスに、FloatクラスをIntegerクラスに変換できる
+number = 10.to_f → 10
+number = 10.83.tto_i → 10 (小数点以下を切り捨てて整数に変換) 
+
+#to_s
+文字列に変換
+str = 8.to_s → "8"
+
+#round
+FloatクラスからIntegerクラスに変換するときに、小数点以下切り捨てではなく
+四捨五入をして変換する
+number = 10.83.round → 11
+
+#abs
+絶対値を取得する
+number = (-3).abs →  3
+
