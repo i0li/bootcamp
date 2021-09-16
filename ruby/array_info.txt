@@ -1,0 +1,58 @@
+配列クラス
+
+indexは「ー」をつけると末尾からの順番になる
+== 定義の仕方 ==
+Array[item, ...]
+例）
+array = Array[100,200,300]
+以下のように簡単に定義することもできる
+array = [100,200,300]
+
+== 要素数で定義 ==
+Array.new([size, val]])
+Array.new(size){|index| ...}
+例)
+array = Array.new(3) → [nil,nil,nil]
+array = Arry.new(3, "Red") → ["Red","Red","Red"]
+array = Array.new(3){|index| "#{index}"} → ["0","1","3"]
+
+== 要素の取得 == 
+array[index]
+array[start_index..end_index]
+例)
+array = [100,200,300]
+
+array[0] → 100
+array[0..1] → [100,200]
+
+== 要素の追加 ==
+末尾に追加 : array.push(item)
+           array << item
+先頭に追加 : array.unshift(item)
+例)
+array = [100,200,300]
+
+array.push(400) → [100,200,300,400]
+array.push(400,500) → [100,200,300,400,500]
+array << 400 → [100,200,300,400]
+array.unshift(0) → [0,100,200,300]
+
+==　要素の挿入 ==
+array.insert(index,item)
+例）
+array = [100,200,300]
+
+array.insert(2,400) → [100,200,400,300]
+
+== 要素の削除 == 
+要素指定 : array.delete(item)
+インデックス指定 : array.delete_at(index)
+先頭を削除 : array.shift(number_item)
+範囲指定 : array.slice!(start_index, delete_length)
+例）
+array = [100,200,300]
+
+array.delete(100) → [200,300]
+array.delete_at(1) → [100,300]
+array.shift(2) → [300]
+array.slice!(0,2) →　[300]
