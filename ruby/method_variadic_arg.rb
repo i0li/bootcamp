@@ -4,7 +4,7 @@
 #可変長引数にするためには引数名に「*」をつける
 
 def favorite_fruit(*fruits)
-    puts("#{fruits}")
+  puts "#{fruits}" 
 end
 
 favorite_fruit("apple","grape","orange")
