@@ -16,5 +16,5 @@
 p ['a', 'b'].map(&:upcase)
 
 #省略しないで書いた形
-p ['a', 'b'].map {|string| :upcase.to_proc.call(string)}
+p ['a', 'b'].map { |string| :upcase.to_proc.call(string) }
 
