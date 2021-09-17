@@ -5,25 +5,25 @@
 #【*args】可変長引数　引数の数に制限がなく与えることができる
 #【block_given?】メソッドにブロックが与えられているかどうかをboolで返す
 def f(*args)
-    puts "f: args→#{args}, block: #{block_given?}"
-    return "f"
+  puts "f: args→#{args}, block: #{block_given?}"
+  return "f"
 end
 
 def b(*args)
-    puts "b: args→#{args}, block: #{block_given?}"
-    return "b"
+  puts "b: args→#{args}, block: #{block_given?}"
+  return "b"
 end
 
 a = 1
 b = 2
 
-puts("---do end")
+puts "---do end" 
 #fの引数にはa, b, ブロックの三つが与えられている。結合ができていない
 #f a, b do end
 # |-----------|
 f a, b do end
 
-puts("---{}")
+puts "---{}"
 #fの引数にはa, bに{}を与えた戻り値の二つが与えられている。結合ができている
 #f a, b {}
 # |-||---|
