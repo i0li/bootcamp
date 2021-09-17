@@ -11,7 +11,7 @@ strings = 'a'..'g'
 
 #繰り返し処理で使う
 numbers.each do |number|
-    p number
+  p number
 end
 
 #連続した要素の配列を定義するときに使う(可変長引数として与える)
