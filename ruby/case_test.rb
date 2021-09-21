@@ -3,12 +3,13 @@
 
 fruit = "apple"
 
-case fruit
-when "apple" then
-  price = 200
-when "orange" then
-  price = 100
-when "grape" then 
-  price = 300
-end
+price = 
+  case fruit
+  when "apple"
+    200
+  when "orange" 
+    100
+  when "grape" 
+    300
+  end
 puts "#{fruit} : ¥#{price}"
