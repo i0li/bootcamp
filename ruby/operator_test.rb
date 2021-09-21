@@ -6,7 +6,7 @@ b = 3
 str1 = "sakino"
 str2 = "iori"
 
-puts "a=5 , b=3"
+puts "a = 5 , b = 3"
 puts "str1='sakino' , str2='iori'"
 
 #== 四則演算 ==
@@ -27,8 +27,9 @@ puts a / b
 print "a % b = "
 puts a % b
 
+#何乗の時の**ではスペースを開けない
 print "a ** b = "
-puts a ** b
+puts a**b
 
 #== 　文字列比較　==
 #非破壊的(元の変数は変更しない)
@@ -42,7 +43,7 @@ print "str1 →"
 puts str1
 
 print "str1 *3 → "
-puts str1 *3 
+puts str1 * 3 
 
 #== 比較演算子 ==
 #等しければtrue
