@@ -43,7 +43,7 @@ end
 puts "-----loop"
 
 number = 1
-loop{
+loop {
   p number 
   if number >= 5 
     break
