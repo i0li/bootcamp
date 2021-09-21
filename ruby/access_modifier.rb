@@ -7,6 +7,8 @@
 # protected　→ クラス外からのアクセスはできない　
 #              同じクラスやサブクラスであれば呼び出せる
 
+#レシーバ : メソッドを呼び出したオブジェクト自身のこと。「.」の左側
+
 #先ほど作成したたい焼きクラスを使う
 class Taiyaki
 
@@ -21,13 +23,13 @@ class Taiyaki
   end
 
   def call_show_info
-    #selfをつけても付けなくても呼び出せる
+    #publicメソッドはレシーバの形でも、そうでなくても呼び出せる
     self.show_info
     show_info
   end
 
   def call_private_show_cost
-    #selfをつけては呼び出せない
+    #privateメソッドはレシーバ(self)の形で呼び出せない
     private_show_cost
   end
 
