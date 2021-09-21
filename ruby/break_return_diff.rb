@@ -5,7 +5,7 @@ def loop_break
   3.times do |i|
     puts "===#{i}"
       3.times do |j|
-        break if j==1
+        break if j == 1
         p j
       end
   end
@@ -20,7 +20,7 @@ def loop_return
   3.times do |i|
     puts "===#{i}" 
     3.times do |j|
-      return if j==1
+      return if j == 1
       p j
     end
   end
