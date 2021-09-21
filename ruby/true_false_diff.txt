@@ -1,0 +1,14 @@
+== true ==
+全ての値とtrueそのものが真
+
+1
+[1, 2, 3]
+'Hello'
+True
+
+
+== false ==
+falseとnilは偽
+
+nil
+false
