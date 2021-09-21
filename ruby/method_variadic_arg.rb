@@ -7,4 +7,4 @@ def favorite_fruit(*fruits)
   puts "#{fruits}" 
 end
 
-favorite_fruit("apple","grape","orange")
+favorite_fruit("apple" ,"grape" ,"orange")
