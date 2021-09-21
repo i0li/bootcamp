@@ -59,6 +59,6 @@ p numbers.sum(5)
 #sort : 配列内をソートする
 #"a","b","c"などの文字列などでもソートしてくれる
 puts "---sort"
-numbers = [8 , 2, 5]
+numbers = [8 ,2 , 5]
 p numbers
 p numbers.sort
