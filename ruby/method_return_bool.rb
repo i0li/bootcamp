@@ -1,7 +1,7 @@
 #戻り値がboolのメソッド
 
 def exam_pass?(score)
-  score >=60
+  score >= 60
 end
 
 
