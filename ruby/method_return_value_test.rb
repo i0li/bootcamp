@@ -1,6 +1,6 @@
 #メソッドの戻り値について
 
-def comparison(num1,num2)
+def comparison(num1, num2)
   if num1 > num2
     "#{num1} は #{num2}　以上"
   elsif num1 < num2
@@ -11,4 +11,4 @@ def comparison(num1,num2)
 end
 
 
-puts comparison(5,3)
+puts comparison(5, 3)
