@@ -6,11 +6,11 @@ score = 80
 
 result = 
   if score >= 60
-   "great!"
-   "pass"
+    "great!"
+    "pass"
   else
-   "bad"
-   "failure"
+    "bad"
+    "failure"
   end
 
 puts result
