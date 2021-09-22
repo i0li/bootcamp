@@ -2,7 +2,7 @@
 
 #=== for文 ===
 puts "-----for"
-for i in [1,2,3,4,5] do
+for i in [1, 2, 3, 4, 5] do
   p i 
 end
 
@@ -24,7 +24,7 @@ end
 #=== each ===
 #配列の繰り返し処理にはfor文ではなくこちらの方が良く使われる
 puts "-----each"
-[1,2,3,4,5].each do |number|
+[1, 2, 3, 4, 5].each do |number|
   p number
 end
 
@@ -82,7 +82,7 @@ end
 #=== step ===
 #到達点とステップ幅を指定して繰り返し処理を行うことができる
 puts "-----step"
-0.1.step(0.5,0.1) do |number|
+0.1.step(0.5, 0.1) do |number|
   p number 
 end
 
