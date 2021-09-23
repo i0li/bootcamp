@@ -1,0 +1,38 @@
+よく発生する例外クラス
+
+● NoMemoryError
+メモリの確保に失敗すると発生
+
+● ScriptError
+スクリプトのエラーを表す例外クラス
+
+● SyntaxError
+ソースコードに文法エラーがあったときに発生
+
+● SecurityError
+セキュリティ上の問題が起きたときに発生
+
+● ArgumentError
+引数があっていない時、数は合っているが期待されるあたいではない場合に発生
+
+● EncodingError
+エンコーディング関連の問題が起きたときに発生
+
+● IOError
+入出力でエラーが起きると発生
+
+● EOFError
+End of File(ファイルの終わりを示す目印)に達したときに発生
+
+● IndexError
+添字が範囲外の時に発生
+
+● KeyError
+Hash #fetchで存在しないkeyを指定した時に発生
+
+● NoMethodError
+定義されていないメソッドを呼び出しと時に発生
+
+● RangeError
+値が定義した範囲外の時に発生
+
