@@ -2,13 +2,17 @@
 #その際に複数のクラスを作成し関連づける
 #（継承やmoduleは使わない / 生物ではないモノにする）"
 
+
+#=== テレビ本体 ===
 class Television
+
+  MAX_VOLUME = 10
+  MIN_VOLUME = 0
+
   def initialize(number_channel)
     @channels = 0..number_channel
     @channel = 1
     @volume = 5
-    @max_volume = 10
-    @min_volume = 0
     @power = false
   end
 
@@ -25,42 +29,34 @@ class Television
   end
 
   def volume_up_receve
-    if @power
-      if @volume < @max_volume 
-        @volume += 1 
-        puts "〈音量 : #{@volume}〉"
-      else
-        puts "＊＊＊　現在最大音量#{@volume}　＊＊＊"
-      end
-    else
-      no_power_warning_private
-    end
+    #電源がついてなければ警告表示
+    return no_power_warning_private if @power == false
+    #現在の音量が最大にも関わらず上げようとした場合は警告表示
+    return puts "＊＊＊　現在最大音量#{@volume}　＊＊＊" if @volume == MAX_VOLUME
+    #通常処理
+    @volume += 1 
+    puts "〈音量 : #{@volume}〉"
   end
 
+
   def volume_down_receve
-    if @power
-      if @volume > @min_volume
-        @volume -= 1 
-        puts "〈音量 : #{@volume}〉"
-      else
-        puts "＊＊＊　現在最小音量#{@volume}　＊＊＊"
-      end
-    else
-      no_power_warning_private
-    end
+    #電源がついてなければ警告表示
+    return no_power_warning_private if @power == false
+    #現在の音量が最小にも関わらず下げようとした場合は警告表示
+    return puts "＊＊＊　現在最小音量#{@volume}　＊＊＊" if @volume == MIN_VOLUME
+    #通常処理
+    @volume -= 1 
+    puts "〈音量 : #{@volume}〉"
   end
 
   def change_channel_receive(channel_order)
-    if @power
-      if @channels.include?(channel_order)
-        @channel = channel_order 
-        puts "\nただいまチャンネル#{@channel}です"
-      else
-       puts "チャンネルを受信できません"
-      end
-    else
-      no_power_warning_private
-    end
+    #電源がついてなければ警告表示
+    return no_power_warning_private if @power == false
+    #受信できるチャンネル以外を入力された場合
+    return puts "チャンネルを受信できません" if @channels.include?(channel_order) == false
+    #通常処理
+    @channel = channel_order 
+    puts "\nただいまチャンネル#{@channel}です"
   end
 
 
@@ -70,65 +66,32 @@ class Television
   end
 end
 
+
+
+#=== テレビのリモコン ===
 class Television_remote
-  def initialize(tv_name)
-    @target_tv_name = tv_name
+  def initialize(television_name)
+    @target_television_name =television_name
   end
 
 
   def turn_on_send
-    @target_tv_name.turn_on_receive
+    @target_television_name.turn_on_receive
   end
 
   def turn_off_send
-    @target_tv_name.turn_off_receive
+    @target_television_name.turn_off_receive
   end
 
   def volume_up_send
-    @target_tv_name.volume_up_receve
+    @target_television_name.volume_up_receve
   end
 
   def volume_down_send
-    @target_tv_name.volume_down_receve
+    @target_television_name.volume_down_receve
   end
 
   def change_channel_send(channel_order)
-    @target_tv_name.change_channel_receive(channel_order)
+    @target_television_name.change_channel_receive(channel_order)
   end
 end
-
-
-
-#クラスからインスタンス作成
-test_tv = Television.new(5)
-test_tv_remote = Television_remote.new(test_tv)
-
-puts "\n【通常操作】"
-#電源をつける
-test_tv_remote.turn_on_send
-#音量調整
-test_tv_remote.volume_up_send
-test_tv_remote.volume_down_send
-#チャンネル変更
-test_tv_remote.change_channel_send(5)
-test_tv_remote.change_channel_send(10)
-#電源オフ
-test_tv_remote.turn_off_send
-
-puts "\n【警告表示】"
-#電源がついていない状況で音量調整、チェンネル変更
-test_tv_remote.volume_up_send
-test_tv_remote.volume_down_send
-test_tv_remote.change_channel_send(5)
-test_tv_remote.change_channel_send(10)
-
-#最大音量　最小音量
-test_tv_remote.turn_on_send
-6.times{
-  test_tv_remote.volume_up_send
-}
-11.times{
-  test_tv_remote.volume_down_send
-}
-test_tv_remote.turn_off_send
-
