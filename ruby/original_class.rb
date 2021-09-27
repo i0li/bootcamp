@@ -29,9 +29,7 @@ class Television
   end
 
   def volume_up_receve
-    #電源がついてなければ警告表示
-    return no_power_warning_private if @power == false
-    #現在の音量が最大にも関わらず上げようとした場合は警告表示
+    return no_power_warning_private unless @power 
     return puts "＊＊＊　現在最大音量#{@volume}　＊＊＊" if @volume == MAX_VOLUME
     #通常処理
     @volume += 1 
@@ -40,9 +38,7 @@ class Television
 
 
   def volume_down_receve
-    #電源がついてなければ警告表示
-    return no_power_warning_private if @power == false
-    #現在の音量が最小にも関わらず下げようとした場合は警告表示
+    return no_power_warning_private unless @power 
     return puts "＊＊＊　現在最小音量#{@volume}　＊＊＊" if @volume == MIN_VOLUME
     #通常処理
     @volume -= 1 
@@ -50,15 +46,12 @@ class Television
   end
 
   def change_channel_receive(channel_order)
-    #電源がついてなければ警告表示
-    return no_power_warning_private if @power == false
-    #受信できるチャンネル以外を入力された場合
-    return puts "チャンネルを受信できません" if @channels.include?(channel_order) == false
+    return no_power_warning_private unless @power 
+    return puts "チャンネルを受信できません" unless @channels.include?(channel_order)
     #通常処理
     @channel = channel_order 
     puts "\nただいまチャンネル#{@channel}です"
   end
-
 
   private
   def no_power_warning_private
@@ -71,7 +64,7 @@ end
 #=== テレビのリモコン ===
 class Television_remote
   def initialize(television_name)
-    @target_television_name =television_name
+    @target_television_name = television_name
   end
 
 
